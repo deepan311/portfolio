@@ -18,7 +18,7 @@ function Home({ scroll }) {
       <h3
         onClick={() => {
           scroll("home");
-          setnav(!nav);
+          setnav(false);
         }}
         className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
