@@ -27,7 +27,7 @@ function Home({ scroll }) {
       <h3
          onClick={() => {
           scroll("skill");
-          setnav(!nav);
+          setnav(false);
         }}
         className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
@@ -36,7 +36,7 @@ function Home({ scroll }) {
       <h3
          onClick={() => {
           scroll("project");
-          setnav(!nav);
+          setnav(false);
         }}
         className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
@@ -45,7 +45,7 @@ function Home({ scroll }) {
       <h3
         onClick={() => {
           scroll("education");
-          setnav(!nav);
+          setnav(false);
         }}
         className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
@@ -54,7 +54,7 @@ function Home({ scroll }) {
       <h3
          onClick={() => {
           scroll("contact");
-          setnav(!nav);
+          setnav(false);
         }}
         className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
