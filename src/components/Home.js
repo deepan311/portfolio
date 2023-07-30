@@ -64,7 +64,7 @@ function Home({ scroll }) {
   );
   return (
     <div
-      className=" w-auto h-[50rem]    bg-gradient-to-bl "
+      className=" w-auto h-[50rem]  relative  bg-gradient-to-bl "
       style={{ backgroundImage: `url(${Bg})`, backgroundSize: "cover" }}
     >
       <nav className=" shadow-xl w-full h-16  fixed z-50 top-0 bg-black/80  flex justify-between px-7 lg:px-16 items-center">
