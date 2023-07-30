@@ -51,7 +51,7 @@ function Education() {
       <div className="grid gap-2 grid-cols-3 p-3">
         {eduList.map((item) => (
           <div
-            className={` shadow-2xl col-span-3 md:col-span-2 lg:col-span-1 bg-white  rounded-lg overflow-hidden text-black`}
+            className={` shadow-2xl col-span-3  md:col-span-1 bg-white  rounded-lg overflow-hidden text-black`}
           >
             <img
               src={item.image}
