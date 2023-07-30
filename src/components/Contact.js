@@ -18,7 +18,7 @@ function Contact() {
       e.target.user_email.value.length < 1 ||
       e.target.message.value.length < 1
     ) {
-      setmsg({ msg: "Enter Valid Form", active: true, color: "bg-red-400/90" });
+      setmsg({ msg: "Enter Valid Form", active: true, color: "bg-red-500" });
       return;
     }
 
@@ -38,14 +38,14 @@ function Contact() {
           setmsg({
             msg: "Mail send Successfully",
             active: true,
-            color: "bg-green-500/90",
+            color: "bg-green-500",
           });
           setload(false);
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          setmsg({ msg: error, active: true, color: "bg-red-500/90" });
+          setmsg({ msg: error, active: true, color: "bg-red-500" });
           setload(false);
         }
       );
@@ -72,7 +72,7 @@ function Contact() {
 
 {msg.active && (
         <div
-          class={`${msg.color} border-l-4 absolute rounded mx-auto top-0 w-3/4 md:w-1/2 right-0 left-0 border-white px-2 text-white p-4`}
+          class={`${msg.color} border-l-4 absolute rounded mx-auto top-8 w-3/4 md:w-1/2 right-0 left-0 border-white px-2 text-white p-4`}
           role="alert"
         >
           <p class="font-bold">{msg.msg}</p>
