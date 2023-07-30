@@ -12,7 +12,6 @@ function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    setload(true);
 
     if (
       e.target.from_name.value.length < 1 ||
@@ -22,6 +21,9 @@ function Contact() {
       setmsg({ msg: "Enter Valid Form", active: true, color: "bg-red-400/90" });
       return;
     }
+
+    setload(true);
+
 
     emailjs
       .sendForm(
