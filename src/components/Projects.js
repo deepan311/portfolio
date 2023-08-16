@@ -81,7 +81,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <h3 className="jonh-font absolute w-full bottom-9 text-sm mx-4 text-gray-900 text-center ">In the future, I believe I will work on good and big projects</h3>
+      <h3 className="jonh-font absolute left-0 right-0 bottom-9 text-sm mx-4 text-gray-900 text-center ">In the future, I believe I will work on good and big projects</h3>
 
     </div>
   );
