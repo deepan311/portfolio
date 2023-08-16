@@ -2,18 +2,19 @@ import React from "react";
 import ProjectBg from "../asset/ProjectBg.svg";
 import Project1 from "../asset/Project1.png";
 import Project2 from "../asset/Project2.png";
+import Dchat from "../asset/Dchat.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
 function Projects() {
   const ProjectList = [
     {
-      name: "Authentication",
-      image: Project1,
+      name: "Chat APp",
+      image: Dchat,
       description:
-        " This Project is fully authetication page. Register, log functionality through Google Account SignIn and Verfiy Link Sendyour Mail Id and reset Password future",
-        githubLink:'https://github.com/deepan311/Full-Auth',
-        visitLink:'https://deep-full-auth.vercel.app'
+        " This is One to One Chat App You Can Sign In with Google and Make a Connection and chat , This is Web APP Build, Using MERN Stack(MONGO DB , EXPRESS, REACT JS, NODE JS), and Real-time Connection Using Socket.io ",
+        githubLink:'https://github.com/deepan311/DeeChat',
+        visitLink:'https://dee-chat-app.onrender.com'
     },
     {
       name: "Authentication",
