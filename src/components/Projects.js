@@ -16,6 +16,14 @@ function Projects() {
         visitLink:'https://deep-full-auth.vercel.app'
     },
     {
+      name: "Authentication",
+      image: Project1,
+      description:
+        " This Project is fully authetication page. Register, log functionality through Google Account SignIn and Verfiy Link Sendyour Mail Id and reset Password future",
+        githubLink:'https://github.com/deepan311/Full-Auth',
+        visitLink:'https://deep-full-auth.vercel.app'
+    },
+    {
         name: "Sample",
         image: Project2,
         description:
@@ -23,6 +31,7 @@ function Projects() {
           githubLink:'https://github.com/deepan311/gauge-project-1',
           visitLink:'https://gauge-project-1.vercel.app/'
       },
+      
     
   ];
 
@@ -31,15 +40,15 @@ function Projects() {
 }
   return (
     <div
-      className="relative"
+      className="relative min-h-[100vh]"
       style={{
         backgroundImage: `url(${ProjectBg})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
     >
-      <div className="absolute left-0 right-0  top-8 flex justify-center   text-white font-bold">
-        <h3 className="bg-black/80 px-10 font-mono py-3 text-xl rounded-lg text-center w-38">
+      <div className="absolute left-0 right-0  top-8 flex justify-center    font-bold">
+        <h3 className="bg-gray-800 px-10 text-white shadow-2xl hover:shadow-none jonh-font py-3 text-xl rounded-full text-center w-38">
           Project's
         </h3>{" "}
       </div>
@@ -71,7 +80,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <h3 className="font-mono text-sm mx-4 text-gray-600 text-center py-7">In the future, I believe I will work on good and big projects</h3>
+      <h3 className="jonh-font absolute w-full bottom-9 text-sm mx-4 text-gray-900 text-center ">In the future, I believe I will work on good and big projects</h3>
 
     </div>
   );

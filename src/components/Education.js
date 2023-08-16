@@ -43,21 +43,22 @@ function Education() {
         backgroundPosition: "center",
       }}
     >
-     <div className="absolute left-0 right-0  top-8 flex justify-center   text-white font-bold">
-        <h3 className="bg-black/80 px-10 font-mono py-3 text-xl rounded-lg text-center w-38">
+     <div className="absolute left-0 right-0  top-8 flex justify-center   text-black font-bold">
+        <h3 className="bg-white/80 px-10 font-mono py-3 text-xl rounded-full jonh-font text-center w-38">
           Education
         </h3>{" "}
       </div>
       <div className="grid gap-2 grid-cols-3 p-3">
         {eduList.map((item) => (
           <div
-            className={` shadow-2xl col-span-3  md:col-span-1 bg-white  rounded-lg overflow-hidden text-black`}
+            className={` shadow-2xl col-span-3 relative  md:col-span-1 bg-white  rounded-lg overflow-hidden text-black`}
           >
             <img
               src={item.image}
-              className="w-full object-cover h-64 shadow-inner"
+              className="w-full  object-cover h-64 shadow-inner"
               alt="projectImg"
             />
+            <div className="absolute bg-gradient-to-t from-blue-900/30 to-orange-300/30 top-0 h-64 left-0 right-0" />
             <h3 className="text-2xl font-bold p-2">{item.name}</h3>
             <hr className="mx-2" />
             <p className="text-sm text-gray-600 px-2 py-2">

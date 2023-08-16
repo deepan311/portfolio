@@ -120,7 +120,7 @@ function Home({ scroll }) {
             I'm <span className="text-red-500">Deepan</span> Becoming FullStack
             developer{" "}
           </h3>
-          <h3 className="text-white/50 px-5 lg:w-1/3 text-center font-mono font-bold  text-[12px] lg:text-sm">
+          <h3 className="text-white/50 px-5 lg:w-1/3 text-center jonh-font font-medium  text-[12px] lg:text-sm">
             I'm computer science student with a strong passion for web
             development and programming.
           </h3>
