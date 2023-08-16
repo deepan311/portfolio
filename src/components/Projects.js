@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 function Projects() {
   const ProjectList = [
     {
-      name: "Chat APp",
+      name: "Chat APP",
       image: Dchat,
       description:
         " This is One to One Chat App You Can Sign In with Google and Make a Connection and chat , This is Web APP Build, Using MERN Stack(MONGO DB , EXPRESS, REACT JS, NODE JS), and Real-time Connection Using Socket.io ",
