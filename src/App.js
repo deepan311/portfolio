@@ -19,7 +19,9 @@ function App() {
       </div>
       {/* SKILL-------------/ */}
 
-      <div id="skill">
+      <div id="skill" className="p-3 bg-black/80 lg:hidden flex justify-center ">
+
+
         <Skill />
       </div>
       {/* PROJECT----------/ */}

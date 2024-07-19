@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Text writing cssc */
+
+/* styles.css */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typewriter {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  animation: typing 4s steps(100, end), blink 0.75s step-end infinite;
+}

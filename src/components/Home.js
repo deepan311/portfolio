@@ -4,8 +4,14 @@ import { MdMenuOpen } from "react-icons/md";
 import { IoMdCloseCircle, IoMdMail } from "react-icons/io";
 import { FaClipboardList, FaGithub } from "react-icons/fa";
 import main from "../asset/Main.png";
+import deepanImg from "../asset/deepan.jpg";
 import Bg from "../asset/bg.svg";
 import { BsLinkedin } from "react-icons/bs";
+import Skill from "./Skill";
+import Language from "./Language";
+import "../App.css"
+import { Typewriter } from 'react-simple-typewriter';
+import { GiFeather } from "react-icons/gi";
 
 function Home({ scroll }) {
   const [nav, setnav] = useState(false);
@@ -25,16 +31,16 @@ function Home({ scroll }) {
         Home
       </h3>
       <h3
-         onClick={() => {
+        onClick={() => {
           scroll("skill");
           setnav(false);
         }}
-        className="py-8 lg:p-3 lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
+        className="py-8 lg:p-3 lg:hidden lg:px-6 lg:rounded-lg cursor-pointer hover:bg-white/20"
       >
         Skill
       </h3>
       <h3
-         onClick={() => {
+        onClick={() => {
           scroll("project");
           setnav(false);
         }}
@@ -52,7 +58,7 @@ function Home({ scroll }) {
         Education
       </h3>
       <h3
-         onClick={() => {
+        onClick={() => {
           scroll("contact");
           setnav(false);
         }}
@@ -62,13 +68,16 @@ function Home({ scroll }) {
       </h3>
     </>
   );
+
+
+
   return (
     <div
       className=" w-auto h-[50rem]  relative  bg-gradient-to-bl "
       style={{ backgroundImage: `url(${Bg})`, backgroundSize: "cover" }}
     >
-      <nav className=" shadow-xl w-full h-16  fixed z-50 top-0 bg-black/80  flex justify-between px-7 lg:px-16 items-center">
-        <p className="text-3xl text-red-500 font-bold">D</p>
+      <nav className=" shadow-xl w-full h-16 bg-black/60  fixed z-50 top-0  flex justify-between px-7 lg:px-16 items-center">
+        <p className="text-3xl text-red-500 font-bold ">D<span className="text-white font-medium">eepan</span></p>
         <div className="block  lg:hidden">
           {nav ? (
             <IoMdCloseCircle
@@ -95,8 +104,8 @@ function Home({ scroll }) {
         </motion.div>
       </nav>
 
-      <div className=" flex flex-col py-10  justify-center z-10 h- items-center lg:items-start lg:px-16">
-        <svg
+      <div className=" flex flex-col py-12    justify-center z-10  items-center lg:items-start lg:px-16">
+        {/* <svg
           className="md:w-[400px] w-[300px] z-10"
           viewBox="0 0 508 360"
           fill="none"
@@ -114,44 +123,106 @@ function Home({ scroll }) {
             d="M27 270V117.6L24 93.6H163.2C179.4 93.6 191.8 95.6 200.4 99.6C209.2 103.6 215.3 109.6 218.7 117.6C222.1 125.4 223.8 135.2 223.8 147V216.3C223.8 228.3 222.1 238.3 218.7 246.3C215.5 254.1 209.5 260 200.7 264C192.1 268 179.6 270 163.2 270H27ZM66.6 241.2H160.8C176.2 241.2 184 234.1 184.2 219.9V143.4C184.2 137.6 182.5 132.7 179.1 128.7C175.7 124.5 169.6 122.4 160.8 122.4H66.6V241.2Z"
             fill="#E34343"
           />
-        </svg>
-        <div className=" w-full z-10 flex gap-12 my-5 flex-col  justify-center items-center ">
-          <h3 className="lg:text-4xl text-3xl text-center  w-[20rem] md:w-[30rem]  text-white font-bold">
-            I'm <span className="text-red-500">Deepan</span> Becoming FullStack
-            developer{" "}
-          </h3>
-          <h3 className="text-white/50 px-5 lg:w-1/3 text-center jonh-font font-medium  text-[12px] lg:text-sm">
-            I'm computer science student with a strong passion for web
-            development and programming.
-          </h3>
+        </svg> */}
 
-          <button
-            onClick={() => {
-              scroll("project");
-            }}
-            className="shadow-md py-3 relative items-center text-md text-white font-bold px-8 pr-16 bg-red-500 rounded-lg"
-          >
-            Project's{" "}
-            <span className="px-2 rounded-r-lg w-12 bg-gray-50/20 absolute flex items-center h-full justify-center top-0 bottom-0 right-0">
-              <FaClipboardList className="text-white text-xl font-bold" />
-            </span>
-          </button>
+        <div className="grid grid-cols-12 w-full justify-between">
+
+          <div className=" col-span-12 lg:col-span-6 w-full flex-grow-0 items-center flex gap-12 my-5 flex-col justify-start  ">
+            <img
+              src={deepanImg}
+              alt=""
+              className="w-[200px] h-[200px] object-cover rounded-full lg:opacity-100  "
+            />
+
+            <h3 className="lg:text-4xl text-3xl text-center   w-[20rem] md:w-[30rem]  text-white font-bold">
+              I'm <span className="text-red-500">Deepanraj</span> Becoming Software
+              developer{" "}
+            </h3>
+
+            <h3 className="text-white/90   text-center jonh-font font-medium text-sm">
+              <Typewriter
+                words={[
+                  "COMPLETED - B E - COMPUTER SCIENCE (2024)"
+                ]}
+                loop={1}
+                cursor
+                cursorStyle="."
+                typeSpeed={20}
+                deleteSpeed={80}
+                delaySpeed={1000}
+              />
+            </h3>
+
+            <h3 className="text-white/90   text-center jonh-font font-medium  text-[12px] lg:text-sm">
+              <Typewriter
+                words={[
+                  "I'm a fresher skilled in Java, JavaScript, Python, and React/Node.js. I excel in Data Structures and Algorithms and aim to work on impactful projects while embracing new technologies."
+                ]}
+                loop={1}
+                cursor
+                cursorBlinking={false}
+                cursorStyle="🪶"
+                typeSpeed={20}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h3>
+
+            <button
+              onClick={() => {
+                scroll("project");
+              }}
+              className="shadow-md py-3 hidden lg:block w-[90%] relative items-center text-md bg-white font-bold px-8 pr-16 text-black rounded-md hover:shadow-white/30"
+            >
+              PROJECT
+              <span className="px-2 rounded-r-lg w-12 bg-gray-200/90 absolute flex items-center h-full justify-center top-0 bottom-0 right-0">
+                <FaClipboardList className="text-black text-xl font-bold" />
+              </span>
+            </button>
+
+            <button
+              onClick={() => {
+                scroll("skill");
+              }}
+              className="shadow-md py-3 lg:hidden w-[90%] relative items-center text-md bg-white font-bold px-8 pr-16 text-black rounded-md hover:shadow-white/30"
+            >
+              PROJECT & SKILL'S
+              <span className="px-2 rounded-r-lg w-12  bg-gray-200/90 absolute flex items-center h-full justify-center top-0 bottom-0 right-0">
+                <FaClipboardList className="text-black text-xl font-bold" />
+              </span>
+            </button>
+          </div>
+
+          <div className=" lg:col-span-6  w-full lg:block  hidden top-20 right-5 p-5 ">
+            <div className="flex justify-center items-center">
+              <Skill />
+            </div>
+
+
+          </div>
+
         </div>
 
         {/* CONTACT-------- */}
       </div>
-      <div className="hidden absolute top-10 left-0 z-0 lg:flex justify-center lg:justify-end right-0">
-        <img
+      <div className="hidden absolute top-20 left-0 z-0 lg:flex justify-center lg:justify-end right-10">
+        {/* <img
           src={main}
           alt=""
           className="w-[500px] lg:opacity-100 opacity-30 "
-        />
+        /> */}
+
+        {/* <img
+          src={deepanImg}
+          alt=""
+          className="w-[200px] h-[200px] object-cover rounded-full lg:opacity-100 opacity-30 "
+        /> */}
       </div>
 
-      <div className="flex gap-12 items-center absolute left-0 justify-center lg:justify-start lg:px-20 right-0 bottom-10">
+      <div className="flex absolute bottom-6 left-0 right-0  items-center  gap-12 justify-center ">
         <div
           onClick={() => scroll("contact")}
-          className="text-white/40 hover:text-red-500 cursor-pointer flex flex-col items-center"
+          className="text-white hover:text-red-500 cursor-pointer flex flex-col items-center"
         >
           <IoMdMail className="text-white hover:text-red-500 text-2xl font-semibold" />
           <h3 className=" text-sm font-semibold">Mail</h3>
@@ -160,14 +231,14 @@ function Home({ scroll }) {
           onClick={() => {
             open("https://www.linkedin.com/in/deepan-raj-9615641bb/");
           }}
-          className="text-white/40  hover:text-red-500 cursor-pointer flex flex-col items-center"
+          className="text-white  hover:text-red-500 cursor-pointer flex flex-col items-center"
         >
           <BsLinkedin className="text-white hover:text-red-500 text-xl font-semibold" />
           <h3 className=" text-sm font-semibold">Linked In</h3>
         </div>
         <div
           onClick={() => open("https://github.com/deepan311")}
-          className="text-white/40  hover:text-red-500 cursor-pointer flex flex-col items-center"
+          className="text-white  hover:text-red-500 cursor-pointer flex flex-col items-center"
         >
           <FaGithub className="text-white hover:text-red-500 text-2xl font-semibold" />
           <h3 className=" text-sm font-semibold">GitHub</h3>

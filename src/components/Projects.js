@@ -1,44 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectBg from "../asset/ProjectBg.svg";
 import Project1 from "../asset/Project1.png";
 import Project2 from "../asset/Project2.png";
-import Dchat from "../asset/Dchat.png";
+import Dchat from "../asset/Dee-Chat.png";
+import Uthvee from "../asset/Uthvee-Image.png"
+import PortFolio from "../asset/Porfolio-making.png"
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
 function Projects() {
+
+  const [shownImg, setshownImg] = useState({url:"",status:false});
   const ProjectList = [
     {
-      name: "Chat APP",
+      name: "Food Donate “Mobile Application” (Final Year Project)",
+      image: Uthvee,
+      description:
+        "I have developed a fully responsive web chat application usingReact JS, Redux, Node.js -Express JS, MongoDB, and WebSocket.io.",
+      githubLink: null,
+      visitLink: null
+    },
+    {
+      name: "Web Chat Application (MERN - Stack)",
       image: Dchat,
       description:
-        " This is One to One Chat App You Can Sign In with Google and Make a Connection and chat , This is Web APP Build, Using MERN Stack(MONGO DB , EXPRESS, REACT JS, NODE JS), and Real-time Connection Using Socket.io ",
-        githubLink:'https://github.com/deepan311/DeeChat',
-        visitLink:'https://dee-chat-app.onrender.com'
-    },
-    {
-      name: "Authentication",
-      image: Project1,
-      description:
         " This Project is fully authetication page. Register, log functionality through Google Account SignIn and Verfiy Link Sendyour Mail Id and reset Password future",
-        githubLink:'https://github.com/deepan311/Full-Auth',
-        visitLink:'https://deep-full-auth.vercel.app'
+      githubLink: 'https://github.com/deepan311/DeeChat',
+      visitLink: 'https://dee-chat-app.onrender.com/'
     },
     {
-        name: "Sample",
-        image: Project2,
-        description:
-          `This Project Nothing But, Only Focus on design part Only`,
-          githubLink:'https://github.com/deepan311/gauge-project-1',
-          visitLink:'https://gauge-project-1.vercel.app/'
-      },
-      
-    
+      name: "PortFolio Marker (Web Application)",
+      image: PortFolio,
+      description:
+        `It is a portfolio web application I've created recently. Anyone can submit their details and create their own portfolio in my site. I used React, Node js to develop this.`,
+      githubLink: 'https://github.com/deepan311/Folio',
+      visitLink: "https://d-portfolio-p95f.onrender.com/deepan"
+    },
+
+
   ];
 
-  const gitOpen = (link)=>{
-    window.open(link,'_blank')
-}
+  const gitOpen = (link) => {
+    window.open(link, '_blank')
+  }
   return (
     <div
       className="relative min-h-[100vh]"
@@ -48,9 +52,9 @@ function Projects() {
         backgroundSize: "cover",
       }}
     >
-      <div className="absolute left-0 right-0  top-8 flex justify-center    font-bold">
-        <h3 className="bg-gray-800 px-10 text-white shadow-2xl hover:shadow-none jonh-font py-3 text-xl rounded-full text-center w-38">
-          Project's
+      <div className="absolute left-6   top-8 flex justify-center    font-bold">
+        <h3 className=" px-10 text-slate-700 shadow-sm shadow-black/40  jonh-font py-3 text-xl  text-center w-38">
+          TECHNICAL PROJECT'S
         </h3>{" "}
       </div>
 
@@ -58,10 +62,11 @@ function Projects() {
         {/* Card */}
 
         {ProjectList.map((item) => (
-          <div className={` shadow-2xl col-span-12 md:col-span-6  ${ProjectList.length < 3 ? 'lg:col-span-6 lg:mx-28' : 'lg:col-span-4'} bg-white  rounded-lg overflow-hidden text-black`}>
+          <div className={`shadow-sm shadow-black/30 col-span-12 md:col-span-6 ${ProjectList.length < 3 ? 'lg:col-span-6 lg:mx-28' : 'lg:col-span-4'} bg-white  rounded-lg overflow-hidden text-black`}>
             <img
               src={item.image}
-              className="w-full object-cover h-52 shadow-inner"
+              onClick={()=>setshownImg({status:true,url:item.image})}
+              className="w-full cursor-pointer object-center object-cover  shadow-inner"
               alt="projectImg"
             />
             <h3 className="text-2xl font-bold p-2">{item.name}</h3>
@@ -70,19 +75,43 @@ function Projects() {
               {item.description}
             </p>
             <hr className="mx-2 my-3" />
-            <div className="flex justify-between w-full ">
-              <button onClick={()=>{gitOpen(item.githubLink)}} className=" flex items-center relative bg-black/80 hover:bg-black/70 px-7 pr-10 text-white py-2 m-2 rounded-lg">
-                GitHub <FaGithub className="absolute right-3 text-xl " />
-              </button>
-              <button onClick={()=>{gitOpen(item.visitLink)}} className="flex items-center relative hover:bg-blue-500 bg-blue-600 px-8 pr-10 text-white font-bold py-2 m-2 rounded-lg">
-                Visit <FiArrowUpRight className="absolute right-3 text-xl " />
-              </button>
-            </div>
+            {
+              item?.githubLink != null && (
+                <div className="flex justify-between w-full ">
+
+                    <button onClick={() => { gitOpen(item?.githubLink) }} className=" flex items-center relative bg-black/80 hover:bg-black/70 px-7 pr-10 text-white py-2 m-2 rounded-md">
+                      GitHub <FaGithub className="absolute right-3 text-xl " />
+                    </button>
+                    <button onClick={() => { gitOpen(item?.visitLink) }} className="flex items-center relative hover:bg-blue-500 bg-blue-600 px-8 pr-10 text-white font-bold py-2 m-2 rounded-md">
+                      Visit <FiArrowUpRight className="absolute right-3 text-xl " />
+                    </button>
+                 
+
+                </div>
+              )
+            }
           </div>
         ))}
       </div>
-      <h3 className="jonh-font absolute left-0 right-0 bottom-9 text-sm mx-4 text-gray-900 text-center ">In the future, I believe I will work on good and big projects</h3>
+      {/* <h3 className="jonh-font absolute left-0 right-0 bottom-9 text-sm mx-4 text-gray-900 text-center ">In the future, I believe I will work on good and big projects</h3> */}
 
+
+{/* Show Image */}
+
+
+{
+  shownImg.status && (
+    <div onClick={()=>setshownImg({status:false,url:""})} className="fixed top-0 flex justify-center items-center left-0 bottom-0 right-0 w-full lg:p-20 p-3 z-50  h-full bg-black/50 ">
+      <img src={shownImg.url} alt="projectImg" className="w-full object-cover" />
+    <div className="absolute flex justify-center bottom-10 left-0 right-0">
+    <button className=" bg-white shadow-black text-black shadow-sm w-10 h-10 rounded-full font-mono">
+    X
+     </button>
+    </div>
+    </div>
+  )
+ 
+}
     </div>
   );
 }
