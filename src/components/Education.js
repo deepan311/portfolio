@@ -9,7 +9,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 function Education() {
   const eduList = [
     {
-      name: "Currently, I am pursuing my final year of B.E. in Computer Science.",
+      name: "Completed B E Computer Science - 2024",
       image: Prist,
       description:
         "P.R.Engineering College,Vallam Thanjavur ",

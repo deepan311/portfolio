@@ -4,7 +4,7 @@ import { MdMenuOpen } from "react-icons/md";
 import { IoMdCloseCircle, IoMdMail } from "react-icons/io";
 import { FaClipboardList, FaGithub } from "react-icons/fa";
 import main from "../asset/Main.png";
-import deepanImg from "../asset/deepan.jpg";
+import deepanImg from "../asset/deepan.png";
 import Bg from "../asset/bg.svg";
 import { BsLinkedin } from "react-icons/bs";
 import Skill from "./Skill";
@@ -131,7 +131,7 @@ function Home({ scroll }) {
             <img
               src={deepanImg}
               alt=""
-              className="w-[200px] h-[200px] object-cover rounded-full lg:opacity-100  "
+              className="w-[200px] h-[200px] object-cover  rounded-full lg:opacity-100  "
             />
 
             <h3 className="lg:text-4xl text-3xl text-center   w-[20rem] md:w-[30rem]  text-white font-bold">
