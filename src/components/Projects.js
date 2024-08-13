@@ -16,7 +16,7 @@ function Projects() {
       name: "Food Donate “Mobile Application” (Final Year Project)",
       image: Uthvee,
       description:
-        "I have developed a fully responsive web chat application usingReact JS, Redux, Node.js -Express JS, MongoDB, and WebSocket.io.",
+        "This application facilitated communication between food donors and the hunger community. The app also enabled nearby orphanages to contact donors and arrange food collection",
       githubLink: null,
       visitLink: null
     },
@@ -24,7 +24,7 @@ function Projects() {
       name: "Web Chat Application (MERN - Stack)",
       image: Dchat,
       description:
-        " This Project is fully authetication page. Register, log functionality through Google Account SignIn and Verfiy Link Sendyour Mail Id and reset Password future",
+        " I have developed a fully responsive web chat application usingReact JS, Redux, Node.js -Express JS, MongoDB, and WebSocket.io.",
       githubLink: 'https://github.com/deepan311/DeeChat',
       visitLink: 'https://dee-chat-app.onrender.com/'
     },
